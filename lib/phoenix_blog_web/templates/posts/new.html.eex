@@ -1,0 +1,9 @@
+<div class="container">
+  <%= form_for @post, posts_path(@conn, :create), fn f -> %>
+    <label>Title:</label>
+    <%= text_input f, :title %>
+    <label>Body:</label>
+    <%= text_input f, :body %>
+    <%= submit "Create Post" %>
+  <% end %>
+</div>

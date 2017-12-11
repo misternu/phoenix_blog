@@ -12,7 +12,7 @@ defmodule PhoenixBlog.Post do
   end
 
   @doc false
-  def changeset(%Post{} = post, attrs) do
+  def changeset(%Post{} = post, attrs \\ %{}) do
     post
     |> cast(attrs, [:title, :body])
     |> validate_required([:title, :body])
